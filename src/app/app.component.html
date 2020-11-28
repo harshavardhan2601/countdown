@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="col-md-12">
+    <h2 class="text-center">Countdown</h2>
+    <form [formGroup]="angFrom">
+      <div class="row">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Choose a date</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="count">
+          <mat-datepicker-toggle matSuffix [for]="picker">
+            <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+          </mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="mt-4 mb-3 text-center">
+        <button id="save_Data" type="submit" (click)='onSubmit()' class="btn  btn-primary text-white">
+          Submit</button>
+      </div>
+    </form>
+
+  </div>
+</div>
+<p id="demo"></p>
